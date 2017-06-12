@@ -35,7 +35,7 @@ rm(list=ls())
 
 load("01172016SampledData.RData")
 
-source("functions/cleanUserInput.R")
+source("Functions/CleanUserInput.R")
 
 # Clean data, save file
 blogsClean <- cleanUserInput(blogs_Sample)
@@ -78,7 +78,7 @@ save(dataBlogWords, dataNewsWords, dataTwitterWords, file = "01182016txt2wordsCo
 
 rm(blogsCorpus, newsCorpus, twitterCorpus)
 
-source("functions/getNGrams.R")
+source("Functions/GetNGrams.R")
 
 
 # Create raw 2gram variables
