@@ -2,13 +2,13 @@ library(shiny)
 
 
 shinyUI(pageWithSidebar(
-  headerPanel("Data Science Capstone Project"),
+  headerPanel("Data Science Project"),
   sidebarPanel(
     h3("User Input"),
     br(),
     
     strong(""),
-    textInput("text1", "Enter a phrase below:", value = "I am looking forward to seeing"),
+    textInput("text1", "Enter a phrase below:", value = "I hope to see you "),
     br(),
 
     selectInput("words1", "Maximum predicted words to return",
@@ -19,8 +19,8 @@ shinyUI(pageWithSidebar(
                                "9" = 9, "10" = 10), selected = 5),
     br(),
     
-    strong("Click the button below to return the predicted words."),
-    actionButton("button1", "Analyze Text")
+    strong("Click the button below to return the predicted words"),
+    actionButton("button1", "Analyse text")
     
     
   ),
