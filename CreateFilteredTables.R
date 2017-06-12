@@ -20,7 +20,7 @@ twitter <- readLines(con)
 close(con)
 rm(con)
 
-source('functions/sampleData.R')
+source('Functions/SampleData.R')
 
 # These percentages were chosen to give us roughly 80,000 thousands samples in each variable
 # This action was performed due to memory limitations
