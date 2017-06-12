@@ -18,7 +18,7 @@ The data is from a corpus called HC Corpora (www.corpora.heliohost.org). See the
 
 Below you can see a flowchart for the text prediction algorithm deployed on the shiny apps website. One key aspect is the utilization of "Stupid Backoff" approach. Specifically, at Step 2 in the flow chart, if a match is not found we will shorten the user input in Step 3 and search again to increase the likelihood a match is found. This also requires we add a penalty to the final probability. For our implementation we add log(0.4) to the final probability.
 
-![Flow](figures/flowChartCapstone.png)
+![Flow](flowChartCapstone.png)
 
 - Step 1: We begin with user input and filter it to remove profanity, punctuation, contractions, numbers, foreign characters, common words, and any extra white space.
 	+ If the user enters "I am looking forward to seeing the" the algorithm will use "looking forward seeing" 
