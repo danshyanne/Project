@@ -33,19 +33,19 @@ Below you can see a flowchart for the text prediction algorithm deployed on the 
 ### Calculating Probability Score
 The image below shows a conventional method for calculating the probability of a sentence. For our purposes the equation will be slightly different as we wish to predict the next word.
 
-![prob1](figures/probBase.png)
+![prob1](probBase.png)
 
 In order to predict the next word we begin with the left hand side of the equation below. This statement reads the probability of 'you' given 'looking forward seeing'. The full equation below employs a Markov assumption. Under this assumption we can reduce the computational complexity of algorithm.
 
-![prob2](figures/probMarkov.png)
+![prob2](probMarkov.png)
 
 The equation below shows the model used to calculate a probability score for each predicted word. Multiplication is replaced with addition since we are using log probability. In the event the "Stupid Backoff" was employed we also must add a penalty of log(0.4) to the probability score. A penalty of log(0.4) is added to the probability score each time the sequence is shortened.
 
-![prob3](figures/probCapstone.png)
+![prob3](probCapstone.png)
 
 If multiple matches are found for a sequence we rank them based on scores calculated from the above equation. If only one word is necessary to return we can use the equation below.
 
-![prob4](figures/maxProb.png)
+![prob4](maxProb.png)
 
 
 ### Algorithm Rationale
